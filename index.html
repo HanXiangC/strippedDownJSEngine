@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tower Defense WDI Editions</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Local style -->
+    <link href="CanvasElements/CSS/styles.css" rel="stylesheet" media="screen">
+
+  </head>
+
+  <body style="background-image:url(whirlpool.png)">
+
+    <div class="row">
+
+      <div class="row">
+        <div class="col-xs-12" id="pillarHead">
+        </div>
+      </div>
+
+      <div class="col-md-1" id = "leftPillar">
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+        <div class="col-xs-12 pillarDecor">
+        </div>
+      </div>
+      <div class="col-md-1" id = "optionBlock">
+
+        <div class="row" id="optionMenu">
+          <div class="col-xs-12">
+            Options Menu
+          </div>
+        </div>
+
+
+
+      <div class="row">
+        <div class="col-xs-12 optionButton">
+          <button onclick="this.disabled=true; startGame();" class="optionButtonInner">
+            <div class = "description">
+              Start
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 optionButton">
+          <button onclick="location.reload()" class="optionButtonInner">
+            <div class = "description">
+              Reset
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 optionButton">
+          <button onclick="pauseGame()" class="optionButtonInner">
+            <div class = "description">
+              Pause
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 optionButton">
+          <button onclick="resumeGame()" class="optionButtonInner">
+            <div class = "description">
+              Resume
+            </div>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="col-md-8" id = "gameBlock">
+        <canvas id = "interfaceBoard" width = "800" height = "70">
+        </canvas>
+
+        <canvas id = "myGameBoard" width = "800" height = "600"></canvas>
+      </div>
+      <div class="col-md-1" id = "towerBlock">
+
+        <div class="row" id="turretMenuHeader">
+          <div class="col-xs-12">
+            Turret Construction Menu
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 turretBuildButton">
+            <button onclick="approveConstruction(gunTower)" class = "turretButton" id = "gunTurret">
+              <div class = "description">
+                Gun Turret - $10
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 turretBuildButton">
+            <button onclick="approveConstruction(shotgunTurret)" class = "turretButton" id = "shotgunTurret">
+              <div class = "description">
+                Shotgun Turret - $20
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 turretBuildButton">
+            <button onclick="approveConstruction(machineGunTower)" class = "turretButton" id = "machineGunTower">
+              <div class = "description">
+                MG Turret - $30
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 turretBuildButton">
+            <button onclick="approveConstruction(cannonTower)" class = "turretButton" id = "cannonTurret">
+              <div class = "description">
+                Cannon Turret - $55
+              </div>
+            </button>
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-xs-12 turretBuildButton">
+          <button onclick="approveConstruction(laserTower)" class = "turretButton" id = "laserTurret">
+            <div class = "description">
+              Laser Turret - $60
+            </div>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-12 turretBuildButton">
+          <button onclick="playSound()" class = "turretButton" id = "cancel" background-color = "red">
+            <div class = "description">
+              Cancel
+            </div>
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col-md-1" id = "rightPillar">
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+      <div class="col-xs-12 pillarDecor">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12" id="pillarBottom">
+    </div>
+  </div>
+
+  <audio id="theme">
+  <source src="./ExtraSounds/TAKEDOWN.WAV" preload = "auto">
+  </audio>
+
+  <audio id="battleStations">
+  <source src="./ExtraSounds/GENQUTR.WAV" preload = "auto">
+  </audio>
+
+  <audio id="attackBegins">
+  <source src="./ExtraSounds/Stampede_Large-Mike_Koenig-829800776.wav" preload = "auto">
+  </audio>
+
+  <audio id="attackBugle">
+  <source src="./ExtraSounds/Charge.wav" preload = "auto">
+  </audio>
+
+
+  <audio id="laserReload">
+  <source src="./WeaponSounds/Power_Up_Ray-Mike_Koenig-800933783.wav" preload = "auto">
+  </audio>
+
+  <audio id="laserFire">
+  <source src="./WeaponSounds/Alien_Machine_Gun-Matt_Cutillo-2023875589.wav" preload = "auto">
+  </audio>
+
+  <audio id="laserFire2">
+  <source src="./WeaponSounds/ray_gun-Mike_Koenig-1169060422.wav" preload = "auto">
+  </audio>
+
+  <audio id="rifleFire">
+  <source src="./WeaponSounds/M1 Garand Gunfire-SoundBible.com-697264290.wav" preload = "auto">
+  </audio>
+
+  <audio id="rifleFire2">
+  <source src="./WeaponSounds/M1 Garand Single-SoundBible.com-1941178963.wav" preload = "auto">
+  </audio>
+
+  <audio id="rifleReload">
+  <source src="./WeaponSounds/Gun_Cocking_Slow-Mike_Koenig-1019236976.wav" preload = "auto">
+  </audio>
+
+  <audio id="rifleReload2">
+  <source src="./WeaponSounds/Chambering A Round-SoundBible.com-854171848.wav" preload = "auto">
+  </audio>
+
+  <audio id="machineGunReload">
+  <source src="./WeaponSounds/Machine Gun Pop In Clip-SoundBible.com-1726852999.wav" preload = "auto">
+  </audio>
+
+  <audio id="machineGunFire">
+  <source src="./WeaponSounds/50 Caliber Machine Gun-SoundBible.com-664518180.wav" preload = "auto">
+  </audio>
+
+  <audio id="machineGunFire2">
+  <source src="./WeaponSounds/Machine+Gun+3.wav" preload = "auto">
+  </audio>
+
+  <audio id="machineGunFire3">
+  <source src="./WeaponSounds/Machine Gun Fire Distance-SoundBible.com-342271882.wav" preload = "auto">
+  </audio>
+
+
+  <audio id="cannonFire">
+  <source src="./WeaponSounds/Big Bomb-SoundBible.com-1219802495.wav" preload = "auto">
+  </audio>
+
+  <audio id="cannonFire2">
+  <source src="./WeaponSounds/Sonic Boom-SoundBible.com-876321507.mp3" preload = "auto">
+  </audio>
+
+  <audio id="cannonFire3">
+  <source src="./WeaponSounds/shotgun-mossberg590-RA_The_Sun_God-451502290.wav" preload = "auto">
+  </audio>
+
+  <audio id="shotgunReload">
+  <source src="./WeaponSounds/Winchester12-RA_The_Sun_God-1722751268.wav" preload = "auto">
+  </audio>
+
+  <audio id="shotgunShellFall">
+  <source src="./WeaponSounds/Shells_falls-Marcel-829263474.wav" preload = "auto">
+  </audio>
+
+  <audio id="shotgunFire">
+  <source src="./WeaponSounds/shotgun-spas_12-RA_The_Sun_God-503834910.wav" preload = "auto">
+  </audio>
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+      <!-- Local script -->
+      <script src="EngineElements/Globals/globalSettings.js"></script>
+      <script src="EngineElements/Globals/levelSettings.js"></script>
+      <script src="EngineElements/Globals/winLoss.js"></script>
+      <script src="EngineElements/Globals/gameSounds.js"></script>
+
+      <script src="MapElements/Map/mapAssets.js"></script>
+
+      <script src="CanvasElements/CanvasSettings/canvasSettings.js"></script>
+
+      <script src="CanvasElements/Interface/interfaceSettings.js"></script>
+      <script src="CanvasElements/Interface/interface.js"></script>
+
+      <script src="CanvasElements/InterfaceAssets/timer.js"></script>
+      <script src="CanvasElements/InterfaceAssets/coordinateTracker.js"></script>
+      <script src="CanvasElements/InterfaceAssets/moneyCounter.js"></script>
+
+      <script src="GameAssets/Towers/towerConstruction.js"></script>
+      <script src="GameAssets/Towers/towerConstructionGuide.js"></script>
+      <script src="GameAssets/Towers/towerSettings.js"></script>
+      <script src="GameAssets/Towers/towerTypes.js"></script>
+      <script src="GameAssets/Towers/towers.js"></script>
+      <script src="GameAssets/Projectiles/projectileAudio.js"></script>
+      <script src="GameAssets/Projectiles/projectile.js"></script>
+
+      <script src="MapElements/MapNodes/mapNodeSettings.js"></script>
+      <script src="MapElements/MapNodes/mapNodes.js"></script>
+      <script src="MapElements/MapNodes/path.js"></script>
+
+      <script src="GameAssets/Creeps/creepSettings.js"></script>
+      <script src="GameAssets/Creeps/creeps.js"></script>
+
+      <script src="EngineElements/Engine/scripts.js"></script>
+
+  </body>
+</html>
