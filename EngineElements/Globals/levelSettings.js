@@ -49,7 +49,7 @@ function increaseDifficulty(){
       if(currentSpawn % 3 == 0){
         creeps[currentSpawn] = new Creep(grotSettings);
 
-      }else if(currentSpawn % 5 == 0 && currentOgres <= ogreLimit && level > 2){
+      }else if(currentSpawn % 5 == 0 && currentOgres <= ogreLimit && level > 1){
         creeps[currentSpawn] = new Creep(ogreSettings);
         currentOgres += 1;
       }else if(currentSpawn % 7 == 0 && currentGolems <= golemLimit && level > 3){
