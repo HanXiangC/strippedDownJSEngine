@@ -15,7 +15,7 @@ Relies on: Nil
 
 */
 
-var cash = 50;
+var cash = 999;
 var spawnLimit = 60;
 var lives = 10;
 var level = 1;
