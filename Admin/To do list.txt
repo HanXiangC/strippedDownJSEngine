@@ -1,0 +1,29 @@
+To do list
+
+Major Mechanics to be done:
+
+
+5 Interface details
+    - Score counter
+    - Money
+    - Timer
+    - Health bar
+
+6 Win/loss conditions
+  - Dedicated spawn and end points
+
+
+9 Level transition
+10 Level setting object
+
+
+
+12. Bullet object
+13. A* Star Pathfinding?
+
+4. Achieve modularity
+  - Modularity: All things can be modified by a global levels object
+
+-----------------------------------------------
+
+Juice

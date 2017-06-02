@@ -1,0 +1,126 @@
+
+/*
+
+Name: Han Xiang Choong
+Date: 06/01/17
+File:styles.css
+
+Description:
+
+In this file, we provide basic styling for our front-end HTML elements.
+
+*/
+
+.container{
+  position:absolute;
+}
+
+#leftPillar{
+  border: 15px solid darkgrey;
+  border-right: 25px solid darkgrey;
+  height: 715px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#rightPillar{
+  border: 15px solid darkgrey;
+  border-left: 25px solid darkgrey;
+  height: 715px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#pillarHead{
+  border: 15px solid darkgrey;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#pillarBottom{
+  border: 30px solid darkgrey;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-bottom: 80px solid darkgrey;
+}
+.pillarDecor{
+  border: 15px groove darkgrey;
+  margin-left: auto;
+  margin-right: auto;
+  padding:20px;
+  height:20px;
+  width:100%;
+}
+
+
+#interface{
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#myGameBoard {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  border: 20px solid darkgrey;
+  border-left: 30px solid darkgrey;
+  border-right: 30px solid darkgrey;
+}
+
+.turretButton{
+  text-align: center;
+  width:100%;
+  height:100%;
+  border-radius: 8px;
+}
+.turretBuildButton{
+  text-align: center;
+  padding: 5px;
+  border: 5px solid darkgrey;
+
+}
+
+.optionButton{
+  text-align: center;
+  border: 5px solid darkgrey;
+  padding:5px;
+}
+
+.optionButtonInner{
+  text-align: center;
+  width:100%;
+  height:100%;
+  border-radius: 8px;
+}
+
+#turretMenuHeader{
+  padding-right:5px;
+  text-align: justify;
+  color:black;
+  border: 5px solid darkgrey;
+  font-family: Serif;
+
+  font-size:15px;
+  font-weight: bolder;
+}
+
+#optionMenu{
+  padding-right:5px;
+  text-align: justify;
+  color:black;
+  border: 5px solid darkgrey;
+  font-family: Serif;
+
+  font-size:15px;
+  font-weight: bolder;
+}
+
+
+.description{
+  font-size:15px;
+  vertical-align: middle;
+}
