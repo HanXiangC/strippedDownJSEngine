@@ -52,3 +52,15 @@ var CoordinateTracker = function(){
 
   init();
 }
+
+/*
+
+Example code for onscreen counter
+  function draw(){
+    ctxInterface.font = "20px Arial";
+    ctxInterface.fillStyle = "black";
+    ctxInterface.fillText("Level: "+ level, 500, 50);
+    ctxInterface.fillText("Cash: $"+ cash, 700, 50);
+  //  scoreCounterElement.score += 1;
+  }
+*/
