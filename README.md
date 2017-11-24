@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tower Defense Game
 
 Link: https://hanxiangc.github.io/TowerDefense/
@@ -69,3 +70,6 @@ The Path
   Enemies spawn from the top left and make their way to the bottom right. Stop them.
   
 Good luck!
+=======
+# strippedDownJSEngine
+>>>>>>> 81ce2752aaa25ce1f294ffeddc1a71c7e8444a99
